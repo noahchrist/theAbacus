@@ -1,17 +1,21 @@
 import { useState } from 'react';
 import MarketComparison from './components/MarketComparison.jsx';
-import ConnectionTest from './components/ConnectionTest.jsx';
+import AccountBalance from './components/AccountBalance.jsx';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header>
-        <h1>The Abacus</h1>
-        <p>Count Every Edge</p>
+        <div className="header-content">
+          <div className="title-section">
+            <h1>The Abacus</h1>
+            <p>Count Every Edge</p>
+          </div>
+          <AccountBalance />
+        </div>
       </header>
       <main>
-        <ConnectionTest />
         <MarketComparison />
       </main>
     </div>

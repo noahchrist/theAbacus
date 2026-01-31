@@ -23,13 +23,20 @@ function MarketComparison() {
     return () => clearInterval(interval);
   }, []);
 
-  if (loading) return <div>Loading markets...</div>;
+  if (loading) {
+    return (
+      <div className="market-comparison">
+        <h2>Active Markets</h2>
+        <p>Loading markets...</p>
+      </div>
+    );
+  }
 
   return (
     <div className="market-comparison">
       <h2>Active Markets</h2>
       {markets.length === 0 ? (
-        <p>No markets with positive edge found.</p>
+        <p>No markets with positive edge found. System is scanning...</p>
       ) : (
         <table>
           <thead>
